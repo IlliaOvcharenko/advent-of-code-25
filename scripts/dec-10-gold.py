@@ -4,7 +4,7 @@ Solution is based on such idea:
 - transform matrix to a row echelon form via sympy
 - brute force valid solution that will produce min number of steps 
 
-Way too slow solution, it took ... to solve test case.
+Way too slow solution, it took 7h to solve test case.
 
 Thanks to a numerous reddit post that help me think in a right direction:
 - https://www.reddit.com/r/adventofcode/s/PxAeNeXnFC
@@ -48,8 +48,8 @@ class SolutionSet:
 
 
 def main():
-    # fn = "inputs/aoc-25-dec-10.txt"
-    fn = "inputs/aoc-25-dec-10-test.txt"
+    fn = "inputs/aoc-25-dec-10.txt"
+    # fn = "inputs/aoc-25-dec-10-test.txt"
 
     with open(fn, "r") as f:
         lines = f.readlines()
@@ -57,7 +57,7 @@ def main():
 
     sum_of_presses = 0
 
-    for machine_idx, machine in enumerate(lines):
+    for machine_idx, machine in enumerate(lines[:35]):
         run_if_true(True, print, f"Cur machine idx: {machine_idx+1}")
 
         # parse input buttons and state
